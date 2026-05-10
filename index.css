@@ -1,0 +1,112 @@
+*{
+    color: white;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #e2e2e2;
+    color: black;
+    padding: 10px;
+}
+nav div{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+nav div h3{
+    align-items: center;
+}
+nav div h3 a{
+    margin: 15px 10px;
+    margin-top: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+#Inicio:hover, #Artemis:hover, #Apolo:hover, #MexicoEspacio:hover, #IniciarSesion:hover{
+    color: gray;
+}
+
+
+
+body{
+    background-color: black;
+}
+
+#presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#presentacion h1{
+    font-size: 50px;
+    margin-bottom: 70px;
+    margin-top: 70px;
+}
+#presentacion img{
+    margin-bottom: 90px;
+}
+
+#MasVisitados{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.gallery-btn{
+    background-color: #2e2e2e;
+    border: 1px solid #4b4b4b;
+    color: white;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.gallery-btn:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.gallery-viewport{
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.gallery-viewport::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-track{
+    display: flex;
+    gap: 16px;
+}
+
+.gallery-card{
+    flex: 0 0 calc(50% - 8px);
+    scroll-snap-align: start;
+    background-color: #1b1b1b;
+    border: 1px solid #3a3a3a;
+    padding: 12px;
+    text-align: center;
+}
+
+.gallery-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #0f0f0f;
+}
+
+@media (max-width: 700px){
+    .gallery-card{
+        flex-basis: 100%;
+    }
+}
