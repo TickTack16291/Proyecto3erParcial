@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Remove the default form inputs for unloggedIn users by checking their session
     const loadComments = () => {
-        fetch(`php/obtener_comentarios.php?pagina=${pageName}`)
+        fetch(`php/obtener_comentarios.php?pagina=${pageName}&t=${Date.now()}`, { credentials: 'same-origin' })
             .then(res => res.json())
             .then(data => {
                 if(data.success) {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComments();
 
     // Check if we need to let them use the add-comment form based on session
-    fetch('php/sesion.php')
+    fetch('php/sesion.php?t=' + Date.now(), { credentials: 'same-origin' })
         .then(res => res.json())
         .then(data => {
             if(data.success) {
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     fetch('php/comentar.php', {
                         method: 'POST',
+                        credentials: 'same-origin',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ pagina: pageName, contenido: contenido })
                     })

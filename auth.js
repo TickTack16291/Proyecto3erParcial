@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Comprobar si el usuario tiene sesión persistente
 function checkSession() {
-    fetch('php/sesion.php')
+    fetch('php/sesion.php?t=' + Date.now(), { credentials: 'same-origin' })
         .then(res => res.json())
         .then(data => {
             const navRight = document.querySelectorAll('.nav-right'); 
@@ -44,6 +44,7 @@ function handleLogin(e) {
 
     fetch('php/login.php', {
         method: 'POST',
+        credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ correo: email, contrasena: password })
     })
@@ -52,6 +53,7 @@ function handleLogin(e) {
         if(data.success) {
             messageEl.style.color = 'lightgreen';
             messageEl.textContent = data.message;
+            checkSession(); // Actualizar cabecera inmediatamente
             setTimeout(() => {
                 window.location.href = 'index.html'; // redirigir
             }, 1000);
@@ -76,6 +78,7 @@ function handleRegistro(e) {
 
     fetch('php/registro.php', {
         method: 'POST',
+        credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nombre: nombre, correo: email, contrasena: password })
     })
@@ -101,7 +104,7 @@ function handleRegistro(e) {
 // Función global de Logout
 window.logout = function(e) {
     e.preventDefault();
-    fetch('php/logout.php')
+    fetch('php/logout.php', { credentials: 'same-origin' })
         .then(res => res.json())
         .then(data => {
             if(data.success) {
