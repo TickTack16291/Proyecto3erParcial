@@ -153,6 +153,16 @@ main{
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 18px;
+    display: grid;
+    gap: 12px;
+}
+
+.mission-grid img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
 }
 
 .crew-grid{
@@ -166,6 +176,16 @@ main{
     border-radius: 16px;
     padding: 18px;
     background: rgba(20, 20, 20, 0.8);
+    display: grid;
+    gap: 10px;
+}
+
+.crew-grid img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
 }
 
 .crew-grid span{
@@ -200,7 +220,7 @@ main{
 
 .gallery-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
 }
 
@@ -248,5 +268,15 @@ main{
 
     .hero-media img{
         height: 240px;
+    }
+
+    .gallery-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px){
+    .gallery-grid{
+        grid-template-columns: 1fr;
     }
 }
