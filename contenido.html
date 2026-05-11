@@ -36,20 +36,20 @@
         <section class="hero">
             <div class="hero-text">
                 <p class="hero-eyebrow">Cuerpo celeste seleccionado</p>
-                <h1>Nombre del cuerpo celeste</h1>
-                <p class="hero-description">
+                <h1 id="heroTitle">Nombre del cuerpo celeste</h1>
+                <p class="hero-description" id="heroDescription">
                     Breve introduccion para contextualizar el cuerpo celeste y su importancia dentro del
                     sistema solar. Este texto sirve como resumen general antes de profundizar.
                 </p>
             </div>
             <div class="hero-media">
-                <img src="cuerpo-celeste.jpg" alt="Imagen representativa">
+                <img src="cuerpo-celeste.jpg" alt="Imagen representativa" id="heroImage">
             </div>
         </section>
 
         <section class="content-section">
             <h2>Descripcion</h2>
-            <p>
+            <p id="bodyDescription">
                 Aqui va la descripcion completa del cuerpo celeste: su composicion, su ambiente, su historia
                 de exploracion y cualquier detalle relevante. Esta seccion esta pensada para textos largos.
             </p>
@@ -58,19 +58,19 @@
         <section class="content-section">
             <h2>Datos curiosos</h2>
             <div class="facts-grid">
-                <article class="fact-card">
+                <article class="fact-card" data-fact-index="0">
                     <h3>Dato 01</h3>
                     <p>Un dato corto y llamativo que despierte curiosidad.</p>
                 </article>
-                <article class="fact-card">
+                <article class="fact-card" data-fact-index="1">
                     <h3>Dato 02</h3>
                     <p>Otro dato interesante sobre su entorno o fenomenos.</p>
                 </article>
-                <article class="fact-card">
+                <article class="fact-card" data-fact-index="2">
                     <h3>Dato 03</h3>
                     <p>Un detalle sobre misiones, descubrimientos o mitologia.</p>
                 </article>
-                <article class="fact-card">
+                <article class="fact-card" data-fact-index="3">
                     <h3>Dato 04</h3>
                     <p>Un dato tecnico explicado de forma sencilla y clara.</p>
                 </article>
@@ -80,19 +80,19 @@
         <section class="content-section">
             <h2>Galeria</h2>
             <div class="gallery-grid">
-                <figure class="gallery-item">
+                <figure class="gallery-item" data-gallery-index="0">
                     <img src="galeria-1.jpg" alt="Galeria 1">
                     <figcaption>Descripcion breve de la imagen.</figcaption>
                 </figure>
-                <figure class="gallery-item">
+                <figure class="gallery-item" data-gallery-index="1">
                     <img src="galeria-2.jpg" alt="Galeria 2">
                     <figcaption>Descripcion breve de la imagen.</figcaption>
                 </figure>
-                <figure class="gallery-item">
+                <figure class="gallery-item" data-gallery-index="2">
                     <img src="galeria-3.jpg" alt="Galeria 3">
                     <figcaption>Descripcion breve de la imagen.</figcaption>
                 </figure>
-                <figure class="gallery-item">
+                <figure class="gallery-item" data-gallery-index="3">
                     <img src="galeria-4.jpg" alt="Galeria 4">
                     <figcaption>Descripcion breve de la imagen.</figcaption>
                 </figure>
@@ -155,5 +155,6 @@
     <footer class="site-footer">
         <p>Proyecto educativo - plantilla de contenido</p>
     </footer>
+    <script src="contenido.js" defer></script>
 </body>
 </html>
