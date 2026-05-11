@@ -164,14 +164,7 @@
         <section class="content-section">
             <h2>Comentarios</h2>
             <div class="comments">
-                <article class="comment-card">
-                    <h3>Usuario invitado</h3>
-                    <p>Un comentario de ejemplo para mostrar como se vera la conversacion.</p>
-                </article>
-                <article class="comment-card">
-                    <h3>Explorador espacial</h3>
-                    <p>Comentario adicional para simular varias opiniones.</p>
-                </article>
+                <!-- Los comentarios cargan dinámicamente -->
             </div>
             <form class="comment-form">
                 <label>
@@ -188,29 +181,12 @@
 
         <section class="content-section">
             <h2>Foro</h2>
-            <div class="forum">
-                <article class="forum-card">
-                    <h3>Pregunta destacada</h3>
-                    <p>Descripcion corta de la pregunta que abre el foro.</p>
-                    <span class="forum-meta">5 respuestas · 2 horas</span>
-                </article>
-                <article class="forum-card">
-                    <h3>Conversacion reciente</h3>
-                    <p>Otro tema en el que los usuarios pueden participar.</p>
-                    <span class="forum-meta">3 respuestas · 1 dia</span>
-                </article>
+            <div class="forum" id="forum-container">
+                <!-- Los temas se cargan aquí -->
             </div>
-            <form class="forum-form">
-                <label>
-                    Nuevo tema
-                    <input type="text" placeholder="Titulo del tema">
-                </label>
-                <label>
-                    Mensaje
-                    <textarea rows="4" placeholder="Escribe tu pregunta o comentario"></textarea>
-                </label>
-                <button type="button">Crear tema</button>
-            </form>
+            <div id="forum-form-wrapper">
+                <!-- Formulario dinámico -->
+            </div>
         </section>
     </main>
 
@@ -220,5 +196,6 @@
 
     <script src="auth.js"></script>
     <script src="comentarios.js"></script>
+    <script src="foro.js"></script>
 </body>
 </html>
