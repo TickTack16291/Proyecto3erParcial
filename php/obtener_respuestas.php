@@ -11,7 +11,7 @@ $tema_id = $_GET['tema_id'];
 
 try {
     $stmt = $pdo->prepare("
-        SELECT r.id, r.contenido, r.fecha_respuesta, u.nombre 
+        SELECT r.id, r.usuario_id, r.contenido, r.fecha_respuesta, u.nombre 
         FROM foro_respuestas r
         INNER JOIN usuarios u ON r.usuario_id = u.id
         WHERE r.tema_id = ?

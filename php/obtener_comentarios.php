@@ -13,7 +13,7 @@ $pagina = $_GET['pagina'];
 try {
     // Obtenemos los comentarios junto con el nombre del usuario
     $stmt = $pdo->prepare("
-        SELECT c.id, c.contenido, c.fecha_publicacion, u.nombre 
+        SELECT c.id, c.usuario_id, c.contenido, c.fecha_publicacion, u.nombre 
         FROM comentarios c
         INNER JOIN usuarios u ON c.usuario_id = u.id
         WHERE c.pagina = ?

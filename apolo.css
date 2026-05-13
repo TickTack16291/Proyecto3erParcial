@@ -299,6 +299,35 @@ textarea{
     color: var(--text);
 }
 
+button{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f0f0f0, #bdbdbd);
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(255, 255, 255, 0.16);
+}
+
+button.ghost{
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-xs{
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
 .forum-meta{
     font-size: 0.8rem;
     color: var(--muted);

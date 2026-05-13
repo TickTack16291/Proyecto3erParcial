@@ -129,6 +129,13 @@ button.ghost{
     border: 1px solid var(--border);
 }
 
+.btn-xs{
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
 .hero-media{
     background: rgba(21, 21, 21, 0.7);
     border: 1px solid var(--border);

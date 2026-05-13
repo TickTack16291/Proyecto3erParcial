@@ -14,7 +14,7 @@ const bodies = {
         gallery: [
             { src: "Imagenes/Sol.jpg", caption: "El Sol en luz visible, con manchas solares." },
             { src: "Imagenes/sistemasolar.png", caption: "El Sol domina el sistema solar." },
-            { src: "Imagenes/eclipse.jpg", caption: "Eclipse total: la Luna oculta al Sol." },
+            { src: "Imagenes/EclipseTotal.jpg", caption: "Eclipse total: la Luna oculta al Sol." },
             { src: "Imagenes/sol_actividad.jpg", caption: "Erupción solar captada en ultravioleta." }
         ]
     },
